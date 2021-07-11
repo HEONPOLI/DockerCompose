@@ -11,8 +11,9 @@ services:
       - "3306"
 
   django:
-    image: ssp04046/django-for-compose
+    image: ssp04046/django-compose-final:v2
     links:
       - db:db
+    command: python3 /Django-Mysql/manage.py migrate
     ports:
       - "8000:8000"
