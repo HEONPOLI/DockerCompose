@@ -13,6 +13,6 @@ services:
   django:
     image: ssp04046/django-for-compose
     links:
-      - db:djangodb
+      - db:db
     ports:
       - "8000:8000"
